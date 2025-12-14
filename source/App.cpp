@@ -1,3 +1,8 @@
-//
-// Created by frank on 14/12/2025.
-//
+#include "Charature.h"
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello World!\n";
+    return 0;
+}
