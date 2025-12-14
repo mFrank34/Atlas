@@ -4,7 +4,7 @@ project(Atlas LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include(CTest)  # Required for CTest integration
+include(CTest)
 enable_testing()
 
 # Core sources
@@ -26,6 +26,10 @@ target_include_directories(Atlas PRIVATE ${GTK4_INCLUDE_DIRS})
 target_link_directories(Atlas PRIVATE ${GTK4_LIBRARY_DIRS})
 target_compile_options(Atlas PRIVATE ${GTK4_CFLAGS_OTHER})
 target_link_libraries(Atlas PRIVATE ${GTK4_LIBRARIES})
+
+# SQLite setup (system)
+find_package(SQLite3 REQUIRED)
+target_link_libraries(Atlas PRIVATE SQLite::SQLite3)
 
 set_target_properties(Atlas PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
