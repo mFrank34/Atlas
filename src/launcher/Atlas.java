@@ -10,9 +10,8 @@ public class Atlas {
 
     /**
      * runs the application
-     * @param args we don't use this, but useful if you want to run it with parameters
      */
-    static void main(String[] args) {
+    public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 initializeApplication();
