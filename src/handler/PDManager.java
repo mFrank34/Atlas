@@ -48,7 +48,27 @@ public class PDManager {
     }
 
     /**
-     * data from the PDF file that has been Read into application
+     * Writes the fields to the data file
+     *
+     * @param fields fields that need to be included
+     * @param data   the data that is on the data
+     * @throws IOException catch an error when converting
+     */
+    private static void writeFields(List<PDField> fields, Map<String, String> data) throws IOException {
+        for (PDField field : fields) {
+            if (field instanceof PDNonTerminalField nonTerminal) {
+                writeFields(nonTerminal.getChildren(), data);
+            } else {
+                String value = data.get(field.getFullyQualifiedName());
+                if (value != null) {
+                    field.setValue(value);
+                }
+            }
+        }
+    }
+
+    /**
+     * Data from the PDF file that has been Read into application
      * @param file location of the file
      * @return returns data in manageable format
      * @throws IOException returns error if file breaks
@@ -71,7 +91,21 @@ public class PDManager {
         return data;
     }
 
-    public static void saveToPdf(File file, Character character) {
-
+    /**
+     * Save function to update a PDF form
+     *
+     * @param file location of the form
+     * @param data data that is being modified
+     * @throws IOException catch error with form if that was to happen
+     */
+    public static void saveToPdf(File file, Map<String, String> data) throws IOException {
+        try (PDDocument document = PDDocument.load(file)) {
+            PDAcroForm form = document.getDocumentCatalog().getAcroForm();
+            if (form == null) {
+                throw new IOException("PDF has no form fields");
+            }
+            writeFields(form.getFields(), data);
+            document.save(file);
+        }
     }
 }
