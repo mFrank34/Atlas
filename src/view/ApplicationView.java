@@ -1,4 +1,6 @@
 package view;
 
-public class ApplicationView {
+import javax.swing.*;
+
+public class ApplicationView extends JFrame {
 }
