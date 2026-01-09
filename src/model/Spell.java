@@ -3,7 +3,7 @@ package model;
 /**
  * Represents a spell in D&D 5e
  */
-class Spell {
+public class Spell {
     private String name;
     private int level;
     private String school;

@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Character {
@@ -102,6 +103,19 @@ public class Character {
     private List<Spell> spellsKnown;
     private int[] spellSlotsTotal;
     private int[] spellSlotsExpended;
+
+    // Constructor
+    public Character() {
+        attacks = new ArrayList<>();
+        spellsKnown = new ArrayList<>();
+        cantrips = new ArrayList<>();
+        equipment = new ArrayList<>();
+        featuresAndTraits = new ArrayList<>();
+        languages = new ArrayList<>();
+        otherProficiencies = new ArrayList<>();
+        spellSlotsTotal = new int[9];
+        spellSlotsExpended = new int[9];
+    }
 
     public String getCharacterName() {
         return characterName;
