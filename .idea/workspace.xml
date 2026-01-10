@@ -4,8 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3003790-e255-467e-9b7c-09748902eaad" name="Changes" comment="doing ui for character sheet">
+    <list default="true" id="f3003790-e255-467e-9b7c-09748902eaad" name="Changes" comment="adding in website for front end to change the output">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ApplicationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/CharacterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/Component.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/Panel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/PDFormUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/handler/PDManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/launcher/Atlas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Attack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Character.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Spell.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilities/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/validation/characterValidation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ApplicationView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/CharacterView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,18 +82,18 @@
   </component>
   <component name="RunManager" selected="Application.CharacterView">
     <configuration name="Atlas" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="launcher.Atlas" />
+      <option name="MAIN_CLASS_NAME" value="main.resources.java.launcher.Atlas" />
       <module name="atlas" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="CharacterView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.CharacterView" />
+      <option name="MAIN_CLASS_NAME" value="main.resources.java.view.CharacterView" />
       <module name="atlas" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.*" />
+          <option name="PATTERN" value="main.resources.java.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -138,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768000415674</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding in website for front end to change the output">
+      <option name="closed" value="true" />
+      <created>1768004435662</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1768004435662</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -146,6 +174,7 @@
     <MESSAGE value="adding features to my pd handler &amp; creating a form system for making new form" />
     <MESSAGE value="casting the different models for Character sheet data" />
     <MESSAGE value="doing ui for character sheet" />
-    <option name="LAST_COMMIT_MESSAGE" value="doing ui for character sheet" />
+    <MESSAGE value="adding in website for front end to change the output" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding in website for front end to change the output" />
   </component>
 </project>
