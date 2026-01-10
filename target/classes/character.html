@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Sheet - Atlas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button class="theme-toggle" onclick="toggleTheme()">
+    <span id="themeIcon">🌙</span>
+</button>
+
+<div class="container">
+    <div class="header-bar">
+        <h1 id="characterName">Character Sheet</h1>
+        <div class="header-actions">
+            <button class="btn btn-save" onclick="saveCharacter()">💾 Save</button>
+            <a href="home.html" class="btn">🏠 Home</a>
+        </div>
+    </div>
+
+    <div class="character-grid">
+        <!-- Left Sidebar -->
+        <div>
+            <div class="card">
+                <h2>Basic Info</h2>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" id="charName" value="Thorin Ironforge">
+                </div>
+                <div class="form-group">
+                    <label>Race</label>
+                    <select id="charRace">
+                        <option value="dwarf" selected>Dwarf</option>
+                        <option value="elf">Elf</option>
+                        <option value="human">Human</option>
+                        <option value="halfling">Halfling</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Class</label>
+                    <select id="charClass">
+                        <option value="fighter" selected>Fighter</option>
+                        <option value="wizard">Wizard</option>
+                        <option value="rogue">Rogue</option>
+                        <option value="cleric">Cleric</option>
+                    </select>
+                </div>
+                <div class="info-grid">
+                    <div class="form-group">
+                        <label>Level</label>
+                        <input type="number" id="level" value="5" min="1" max="20">
+                    </div>
+                    <div class="form-group">
+                        <label>XP</label>
+                        <input type="number" id="xp" value="6500">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h2>Health</h2>
+                <div class="health-bar">
+                    <div class="health-display">
+                        <h3>Hit Points</h3>
+                        <div class="hp-controls">
+                            <button class="hp-btn" onclick="adjustHP(-1)">-</button>
+                            <input type="number" id="currentHP" value="45" style="width: 60px; text-align: center;">
+                            <span style="color: #888;">/</span>
+                            <input type="number" id="maxHP" value="45" style="width: 60px; text-align: center;">
+                            <button class="hp-btn" onclick="adjustHP(1)">+</button>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="hpBar" style="width: 100%;">100%</div>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="form-group">
+                        <label>Armor Class</label>
+                        <input type="number" id="ac" value="16">
+                    </div>
+                    <div class="form-group">
+                        <label>Initiative</label>
+                        <input type="number" id="initiative" value="+1">
+                    </div>
+                    <div class="form-group">
+                        <label>Speed</label>
+                        <input type="text" id="speed" value="25 ft">
+                    </div>
+                    <div class="form-group">
+                        <label>Prof. Bonus</label>
+                        <input type="text" id="profBonus" value="+3">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div>
+            <div class="card">
+                <h2>Ability Scores</h2>
+                <div class="ability-scores">
+                    <div class="stat-box">
+                        <label>Strength</label>
+                        <input type="number" id="str" value="16" min="1" max="30" onchange="updateModifier('str')">
+                        <div class="stat-modifier" id="strMod">+3</div>
+                    </div>
+                    <div class="stat-box">
+                        <label>Dexterity</label>
+                        <input type="number" id="dex" value="12" min="1" max="30" onchange="updateModifier('dex')">
+                        <div class="stat-modifier" id="dexMod">+1</div>
+                    </div>
+                    <div class="stat-box">
+                        <label>Constitution</label>
+                        <input type="number" id="con" value="14" min="1" max="30" onchange="updateModifier('con')">
+                        <div class="stat-modifier" id="conMod">+2</div>
+                    </div>
+                    <div class="stat-box">
+                        <label>Intelligence</label>
+                        <input type="number" id="int" value="10" min="1" max="30" onchange="updateModifier('int')">
+                        <div class="stat-modifier" id="intMod">+0</div>
+                    </div>
+                    <div class="stat-box">
+                        <label>Wisdom</label>
+                        <input type="number" id="wis" value="13" min="1" max="30" onchange="updateModifier('wis')">
+                        <div class="stat-modifier" id="wisMod">+1</div>
+                    </div>
+                    <div class="stat-box">
+                        <label>Charisma</label>
+                        <input type="number" id="cha" value="8" min="1" max="30" onchange="updateModifier('cha')">
+                        <div class="stat-modifier" id="chaMod">-1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <div class="tabs">
+                    <div class="tab active" onclick="switchTab('skills')">Skills</div>
+                    <div class="tab" onclick="switchTab('equipment')">Equipment</div>
+                    <div class="tab" onclick="switchTab('spells')">Spells & Abilities</div>
+                    <div class="tab" onclick="switchTab('notes')">Notes</div>
+                </div>
+
+                <div id="skills" class="tab-content active">
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <label><input type="checkbox" checked> Athletics (Str)</label>
+                            <span>+6</span>
+                        </div>
+                        <div class="skill-item">
+                            <label><input type="checkbox"> Acrobatics (Dex)</label>
+                            <span>+1</span>
+                        </div>
+                        <div class="skill-item">
+                            <label><input type="checkbox"> Sleight of Hand (Dex)</label>
+                            <span>+1</span>
+                        </div>
+                        <div class="skill-item">
+                            <label><input type="checkbox"> Stealth (Dex)</label>
+                            <span>+1</span>
+                        </div>
+                        <div class="skill-item">
+                            <label><input type="checkbox" checked> Intimidation (Cha)</label>
+                            <span>+2</span>
+                        </div>
+                        <div class="skill-item">
+                            <label><input type="checkbox"> Perception (Wis)</label>
+                            <span>+1</span>
+                        </div>
+                        <div class="skill-item">
+                            <label><input type="checkbox"> Survival (Wis)</label>
+                            <span>+1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="equipment" class="tab-content">
+                    <div class="equipment-item">
+                        <span>⚔️ Battleaxe (+1)</span>
+                        <span>1d8 + 4 slashing</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span>🛡️ Chain Mail</span>
+                        <span>AC 16</span>
+                    </div>
+                    <div class="equipment-item">
+                        <span>💰 Gold Pieces</span>
+                        <span>250 gp</span>
+                    </div>
+                    <button class="btn" style="margin-top: 15px; width: 100%;">+ Add Item</button>
+                </div>
+
+                <div id="spells" class="tab-content">
+                    <textarea placeholder="List your spells, abilities, and features here..." style="width: 100%; min-height: 300px;"></textarea>
+                </div>
+
+                <div id="notes" class="tab-content">
+                    <textarea placeholder="Character background, notes, and story..." style="width: 100%; min-height: 300px;">A grizzled dwarf warrior from the Iron Mountains...</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Theme toggle function
+    function toggleTheme() {
+        const body = document.body;
+        const themeIcon = document.getElementById('themeIcon');
+
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('light-mode')) {
+            themeIcon.textContent = '☀️';
+            localStorage.setItem('theme', 'light');
+        } else {
+            themeIcon.textContent = '🌙';
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    function updateModifier(stat) {
+        const value = parseInt(document.getElementById(stat).value);
+        const modifier = Math.floor((value - 10) / 2);
+        const sign = modifier >= 0 ? '+' : '';
+        document.getElementById(stat + 'Mod').textContent = sign + modifier;
+    }
+
+    function adjustHP(amount) {
+        const currentHP = document.getElementById('currentHP');
+        const maxHP = document.getElementById('maxHP');
+        let newHP = parseInt(currentHP.value) + amount;
+        newHP = Math.max(0, Math.min(newHP, parseInt(maxHP.value)));
+        currentHP.value = newHP;
+        updateHPBar();
+    }
+
+    function updateHPBar() {
+        const current = parseInt(document.getElementById('currentHP').value);
+        const max = parseInt(document.getElementById('maxHP').value);
+        const percentage = (current / max) * 100;
+        const bar = document.getElementById('hpBar');
+        bar.style.width = percentage + '%';
+        bar.textContent = Math.round(percentage) + '%';
+
+        if (percentage <= 25) {
+            bar.style.background = 'linear-gradient(90deg, #8b0000 0%, #dc143c 100%)';
+        } else if (percentage <= 50) {
+            bar.style.background = 'linear-gradient(90deg, #ff8c00 0%, #ffa500 100%)';
+        } else {
+            bar.style.background = 'linear-gradient(90deg, #228b22 0%, #32cd32 100%)';
+        }
+    }
+
+    function switchTab(tabName) {
+        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        event.target.classList.add('active');
+        document.getElementById(tabName).classList.add('active');
+    }
+
+    function saveCharacter() {
+        // TODO: Connect to Java backend
+        alert('Character saved successfully!');
+        console.log('Saving character data...');
+    }
+
+    // Initialize modifiers on load
+    window.addEventListener('DOMContentLoaded', () => {
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        const themeIcon = document.getElementById('themeIcon');
+
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeIcon.textContent = '☀️';
+        }
+
+        ['str', 'dex', 'con', 'int', 'wis', 'cha'].forEach(updateModifier);
+        updateHPBar();
+
+        // Update character name in header
+        document.getElementById('charName').addEventListener('input', (e) => {
+            document.getElementById('characterName').textContent = e.target.value || 'Character Sheet';
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas - D&D Character Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button class="theme-toggle" onclick="toggleTheme()">
+    <span id="themeIcon">🌙</span>
+</button>
+
+<div class="container">
+    <header>
+        <h1>ATLAS</h1>
+        <p class="subtitle">Dungeons & Dragons Character Manager</p>
+    </header>
+
+    <div class="main-menu">
+        <div class="menu-card" onclick="createNewCharacter()">
+            <div class="icon"> </div>
+            <h2>Create Character</h2>
+            <p>Begin your adventure by forging a new hero. Choose your race, class, and define your destiny.</p>
+        </div>
+
+        <div class="menu-card" onclick="scrollToCharacters()">
+            <div class="icon"> </div>
+            <h2>Load Character</h2>
+            <p>Continue your journey with an existing character. Select from your saved heroes below.</p>
+        </div>
+    </div>
+
+    <div class="character-list-section" id="characterSection">
+        <h2>Your Characters</h2>
+        <ul class="character-list" id="characterList">
+            <!-- Sample characters - replace with actual data from backend -->
+            <li class="character-item">
+                <div class="character-info">
+                    <h3>Thorin Ironforge</h3>
+                    <p>Level 5 Dwarf Fighter • HP: 45/45 • Last played: 2 days ago</p>
+                </div>
+                <div class="character-actions">
+                    <a href="character.html?id=1" class="btn">Load</a>
+                    <button class="btn btn-delete" onclick="deleteCharacter(1, event)">Delete</button>
+                </div>
+            </li>
+            <li class="character-item">
+                <div class="character-info">
+                    <h3>Elara Moonwhisper</h3>
+                    <p>Level 3 Elf Wizard • HP: 18/18 • Last played: 1 week ago</p>
+                </div>
+                <div class="character-actions">
+                    <a href="character.html?id=2" class="btn">Load</a>
+                    <button class="btn btn-delete" onclick="deleteCharacter(2, event)">Delete</button>
+                </div>
+            </li>
+            <li class="character-item">
+                <div class="character-info">
+                    <h3>Garrick Stonefist</h3>
+                    <p>Level 7 Human Barbarian • HP: 68/68 • Last played: 3 days ago</p>
+                </div>
+                <div class="character-actions">
+                    <a href="character.html?id=3" class="btn">Load</a>
+                    <button class="btn btn-delete" onclick="deleteCharacter(3, event)">Delete</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ for the D&D community | Atlas Character Manager</p>
+    </footer>
+</div>
+
+<script>
+    // Theme toggle function
+    function toggleTheme() {
+        const body = document.body;
+        const themeIcon = document.getElementById('themeIcon');
+
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('light-mode')) {
+            themeIcon.textContent = '☀️';
+            localStorage.setItem('theme', 'light');
+        } else {
+            themeIcon.textContent = '🌙';
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // Load saved theme on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        const themeIcon = document.getElementById('themeIcon');
+
+        if (savedTheme === 'light') {
+            document.body.classList.add('light-mode');
+            themeIcon.textContent = '☀️';
+        }
+
+        loadCharacters();
+    });
+
+    function createNewCharacter() {
+        // Redirect to character creation page
+        window.location.href = 'character.html?new=true';
+    }
+
+    function scrollToCharacters() {
+        document.getElementById('characterSection').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    function deleteCharacter(id, event) {
+        event.stopPropagation();
+        if (confirm('Are you sure you want to delete this character? This action cannot be undone.')) {
+            // TODO: Connect to Java backend to delete character
+            console.log('Deleting character with ID:', id);
+            // Remove from UI for demo purposes
+            event.target.closest('.character-item').remove();
+        }
+    }
+
+    // TODO: Load actual character data from backend
+    function loadCharacters() {
+        // This would be an API call to your Java backend
+        // Example: fetch('/api/characters').then(...)
+    }
+</script>
+</body>
+</html>
