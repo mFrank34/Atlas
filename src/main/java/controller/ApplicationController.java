@@ -1,7 +1,7 @@
 package controller;
 
 import model.Application;
-import main.resources.java.view.JavaBridge;
+import view.JavaBridge;
 
 public class ApplicationController {
 

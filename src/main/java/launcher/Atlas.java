@@ -1,6 +1,6 @@
 package launcher;
 
-import main.resources.java.view.JavaBridge;
+import view.JavaBridge;
 import controller.ApplicationController;
 import model.Application;
 
