@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3003790-e255-467e-9b7c-09748902eaad" name="Changes" comment="patching configuration of application for Web UI support">
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/Component.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/factory/Panel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/launcher/Atlas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/launcher/Atlas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/ApplicationBridge.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/CharacterView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/view/JavaBridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/JavaBridge.java" afterDir="false" />
+    <list default="true" id="f3003790-e255-467e-9b7c-09748902eaad" name="Changes" comment="patch to imports version 2">
       <change beforePath="$PROJECT_DIR$/src/main/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
@@ -164,7 +157,31 @@
       <option name="project" value="LOCAL" />
       <updated>1768007324868</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixing bug fixes for application, patching for new system">
+      <option name="closed" value="true" />
+      <created>1768008030364</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1768008030364</updated>
+    </task>
+    <task id="LOCAL-00010" summary="patch to imports">
+      <option name="closed" value="true" />
+      <created>1768008155389</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1768008155389</updated>
+    </task>
+    <task id="LOCAL-00011" summary="patch to imports version 2">
+      <option name="closed" value="true" />
+      <created>1768008210057</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1768008210057</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +193,9 @@
     <MESSAGE value="changing the main system to include webview from the example design from Java with Web UI" />
     <MESSAGE value="adding extra Unversioned Files" />
     <MESSAGE value="patching configuration of application for Web UI support" />
-    <option name="LAST_COMMIT_MESSAGE" value="patching configuration of application for Web UI support" />
+    <MESSAGE value="fixing bug fixes for application, patching for new system" />
+    <MESSAGE value="patch to imports" />
+    <MESSAGE value="patch to imports version 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="patch to imports version 2" />
   </component>
 </project>
