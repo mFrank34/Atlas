@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3003790-e255-467e-9b7c-09748902eaad" name="Changes" comment="casting the different models for Character sheet data">
-      <change afterPath="$PROJECT_DIR$/src/factory/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/factory/Panel.java" afterDir="false" />
+    <list default="true" id="f3003790-e255-467e-9b7c-09748902eaad" name="Changes" comment="doing ui for character sheet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Spell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/CharacterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/CharacterView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/handler/FileManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Character.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Character.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utilities/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utilities/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/CharacterView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/CharacterView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,39 +22,39 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mFrank34"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mFrank34&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mFrank34/Atlas.git",
-    "accountId": "15f65037-6ba2-4942-9853-15e0707b389a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mFrank34/Atlas.git&quot;,
+    &quot;accountId&quot;: &quot;15f65037-6ba2-4942-9853-15e0707b389a&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="382CQro2WKXcvMDKp7EbxM1Dh8L" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Atlas.executor": "Run",
-    "Application.CharacterSheetView.executor": "Run",
-    "Application.CharacterView.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Atlas.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CharacterSheetView.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CharacterView.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="handler" />
@@ -142,13 +130,22 @@
       <option name="project" value="LOCAL" />
       <updated>1767995746246</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="doing ui for character sheet">
+      <option name="closed" value="true" />
+      <created>1768000415674</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1768000415674</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adding a pd handler for application" />
     <MESSAGE value="adding features to my pd handler &amp; creating a form system for making new form" />
     <MESSAGE value="casting the different models for Character sheet data" />
-    <option name="LAST_COMMIT_MESSAGE" value="casting the different models for Character sheet data" />
+    <MESSAGE value="doing ui for character sheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="doing ui for character sheet" />
   </component>
 </project>
