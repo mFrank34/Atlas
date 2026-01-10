@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3003790-e255-467e-9b7c-09748902eaad" name="Changes" comment="redoing UI Elements for application">
+    <list default="true" id="f3003790-e255-467e-9b7c-09748902eaad" name="Changes" comment="updating the README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768009802456</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updating the README.md">
+      <option name="closed" value="true" />
+      <created>1768043376952</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1768043376952</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -204,6 +213,7 @@
     <MESSAGE value="patch to imports" />
     <MESSAGE value="patch to imports version 2" />
     <MESSAGE value="redoing UI Elements for application" />
-    <option name="LAST_COMMIT_MESSAGE" value="redoing UI Elements for application" />
+    <MESSAGE value="updating the README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating the README.md" />
   </component>
 </project>
