@@ -1,8 +1,8 @@
 package launcher;
 
+import main.resources.java.view.JavaBridge;
 import controller.ApplicationController;
 import model.Application;
-import view.ApplicationBridge;
 
 import javax.swing.*;
 
@@ -30,15 +30,14 @@ public class Atlas {
         System.out.println("Generated Application Model...");
 
         // generate main.resources.java.view
-        ApplicationBridge view = new ApplicationBridge();
+        JavaBridge view = new JavaBridge();
         System.out.println("Generated Application View...");
 
         // Create Constructor for project
         ApplicationController controller = new ApplicationController(model, view);
         System.out.println("Created Application Controller...");
 
-        // Set main.resources.java.controller into main.resources.java.view
-        view.setVisible(true);
+        // Set controller into main.resources.java.view
         System.out.println("Application Running...");
     }
 }

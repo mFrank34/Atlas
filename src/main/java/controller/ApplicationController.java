@@ -1,11 +1,11 @@
 package controller;
 
 import model.Application;
-import view.ApplicationBridge;
+import main.resources.java.view.JavaBridge;
 
 public class ApplicationController {
 
-    public ApplicationController(Application model, ApplicationBridge view) {
+    public ApplicationController(Application model, JavaBridge view) {
 
     }
 
