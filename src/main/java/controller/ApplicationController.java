@@ -1,7 +1,7 @@
-package main.resources.java.controller;
+package controller;
 
-import main.resources.java.model.Application;
-import main.resources.java.view.ApplicationBridge;
+import model.Application;
+import view.ApplicationBridge;
 
 public class ApplicationController {
 

@@ -1,4 +1,4 @@
-package main.resources.java.view;
+package view;
 
 import javafx.application.Platform;
 import javafx.scene.web.WebEngine;

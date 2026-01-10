@@ -1,4 +1,4 @@
-package main.resources.java.view;
+package view;
 
 import main.resources.java.model.Character;
 import main.resources.java.model.Attack;

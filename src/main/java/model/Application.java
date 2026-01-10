@@ -1,4 +1,4 @@
-package main.resources.java.model;
+package model;
 
 public class Application {
     private Character character = new Character();

@@ -1,4 +1,4 @@
-package main.resources.java.validation;
+package validation;
 
 public class characterValidation {
 }

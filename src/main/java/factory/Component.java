@@ -1,4 +1,4 @@
-package main.resources.java.factory;
+package factory;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

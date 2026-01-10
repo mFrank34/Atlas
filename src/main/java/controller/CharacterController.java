@@ -1,4 +1,4 @@
-package main.resources.java.controller;
+package controller;
 
 public class CharacterController {
 

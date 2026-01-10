@@ -1,4 +1,4 @@
-package main.resources.java.model;
+package model;
 
 /**
  * Represents a spell in D&D 5e

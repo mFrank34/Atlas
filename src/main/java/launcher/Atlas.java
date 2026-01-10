@@ -1,8 +1,8 @@
-package main.resources.java.launcher;
+package launcher;
 
-import main.resources.java.controller.ApplicationController;
-import main.resources.java.model.Application;
-import main.resources.java.view.ApplicationBridge;
+import controller.ApplicationController;
+import model.Application;
+import view.ApplicationBridge;
 
 import javax.swing.*;
 

@@ -79,6 +79,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="handler" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="view" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.CharacterView">
     <configuration name="Atlas" type="Application" factoryName="Application">

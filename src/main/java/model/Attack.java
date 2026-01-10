@@ -1,4 +1,4 @@
-package main.resources.java.model;
+package model;
 
 /**
  * Represents an attack or weapon in D&D 5e

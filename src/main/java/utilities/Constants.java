@@ -1,4 +1,4 @@
-package main.resources.java.utilities;
+package utilities;
 
 import java.util.List;
 
