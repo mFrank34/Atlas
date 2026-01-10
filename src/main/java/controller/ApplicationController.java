@@ -1,12 +1,19 @@
 package controller;
 
-import model.Application;
-import view.JavaBridge;
-
 public class ApplicationController {
 
-    public ApplicationController(Application model, JavaBridge view) {
+    private String theme = "dark";
 
+    public void onPageLoaded(String pageName) {
+        System.out.println("Loaded page: " + pageName);
     }
 
+    public void setTheme(String theme) {
+        this.theme = theme;
+        System.out.println("Theme set to " + theme);
+    }
+
+    public String getTheme() {
+        return theme;
+    }
 }

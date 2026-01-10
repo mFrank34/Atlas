@@ -1,10 +1,17 @@
 package launcher;
 
-import view.JavaBridge;
 import controller.ApplicationController;
-import model.Application;
+import controller.CharacterController;
+import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
+import javafx.scene.Scene;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
+import netscape.javascript.JSObject;
+import view.JavaBridge;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class Atlas {
 
@@ -14,30 +21,57 @@ public class Atlas {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                initializeApplication();
+                initialize();
             }
         });
     }
 
     /**
-     * code the connects the application main.resources.java.controller to the main.resources.java.model and main.resources.java.view
+     * code the connects the application controller to the model and view
+     * but due to using java with web it changes little
      */
-    private static void initializeApplication() {
-        System.out.println("Application system Starting...");
+    private static void initialize() {
+        // ----- Swing window -----
+        JFrame frame = new JFrame("Atlas");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // generate main.resources.java.model
-        Application model = new Application();
-        System.out.println("Generated Application Model...");
+        JFXPanel fxPanel = new JFXPanel();
+        frame.add(fxPanel);
 
-        // generate main.resources.java.view
-        JavaBridge view = new JavaBridge();
-        System.out.println("Generated Application View...");
+        frame.setSize(800, 600);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
 
-        // Create Constructor for project
-        ApplicationController controller = new ApplicationController(model, view);
-        System.out.println("Created Application Controller...");
+        // ----- JavaFX thread -----
+        Platform.runLater(() -> {
 
-        // Set controller into main.resources.java.view
-        System.out.println("Application Running...");
+            // WebView + Engine
+            WebView webView = new WebView();
+            WebEngine engine = webView.getEngine();
+
+            // Load HTML
+            engine.load(
+                    Objects.requireNonNull(
+                            Atlas.class.getResource("/index.html")
+                    ).toExternalForm()
+            );
+
+            // ----- MVC -----
+            ApplicationController appController = new ApplicationController();
+            CharacterController charController = new CharacterController();
+            JavaBridge bridge = new JavaBridge(appController, charController);
+
+            // Inject bridge AFTER page loads
+            engine.documentProperty().addListener((obs, oldDoc, newDoc) -> {
+                if (newDoc != null) {
+                    JSObject window = (JSObject) engine.executeScript("window");
+                    window.setMember("java", bridge);
+                }
+            });
+
+            // Attach scene to Swing
+            fxPanel.setScene(new Scene(webView));
+        });
     }
+
 }
