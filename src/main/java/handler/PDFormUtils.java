@@ -1,4 +1,4 @@
-package main.resources.java.handler;
+package handler;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;

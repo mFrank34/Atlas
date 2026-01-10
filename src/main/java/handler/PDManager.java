@@ -1,11 +1,11 @@
-package main.resources.java.handler;
+package handler;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentInformation;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 import org.apache.pdfbox.pdmodel.interactive.form.PDNonTerminalField;
-import main.resources.java.utilities.Constants;
+import utilities.Constants;
 
 import java.io.File;
 import java.io.IOException;
